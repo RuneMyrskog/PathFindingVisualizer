@@ -1,5 +1,5 @@
 # PathFindingVisualizer
 blah
   
-#Requirements
+# Requirements
 pygame
