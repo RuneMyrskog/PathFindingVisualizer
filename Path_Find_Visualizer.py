@@ -138,7 +138,15 @@ def update_grid():
 
 
 def assign_positions(window, start_entry, end_entry):
-
+    """
+    process start and end position entries for validity. If entries are invalid,
+    issue warning message and return to window, otherwise assign new start_pos
+    and end_pos from entries and return to pygame window
+    :param window: the tkinter window
+    :param start_entry: entries for the start x and y coordinates
+    :param end_entry: entries for the end x and y coordinates
+    :return: None
+    """
     for entry in {start_entry, end_entry}:
         if not ((entry[0].isdigit() and entry[1].isdigit())
                 and (-1 < int(entry[0]) < COLS and -1 < int(entry[1]) < ROWS)):
@@ -154,7 +162,10 @@ def assign_positions(window, start_entry, end_entry):
 
 
 def popup():
-
+    """
+    Create popup tkinter window which accepts new start and end positions
+    :return: None
+    """
     window = tk.Tk()
     start_x_label = Label(window, text="Start(x) (0 - {0}): ".format(COLS-1))
     start_x_box = Entry(window)
