@@ -84,7 +84,7 @@ def get_grid_coord(pixel) -> (int, int):
 def reset_display():
     """
     restore every square represented in grid to their default state. Set all
-    squares to 1 in grid representing non-obstacle terrain, draw each square
+    squares to AStar.UNBLOCKED in grid representing non-obstacle terrain, draw each square
     with the default color chosen for them
 
     :return: None
@@ -99,7 +99,7 @@ def reset_display():
             else:
                 color = UNBLOCKED_COLOR
 
-            grid[x][y] = 1
+            grid[x][y] = AStar.UNBLOCKED
             update_block((x, y), color)
 
     pygame.display.update()
