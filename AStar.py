@@ -146,6 +146,7 @@ def a_star_search(grid, start_pos, end_pos, delay = 0.0) -> [(int, int)]:
                     if g < open_node.g:
                         open_node.parent = curr_best
                         open_node.g = g
+                        open_node.f = g + h
                     break
 
             if not in_open_set:
