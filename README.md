@@ -5,5 +5,3 @@ visualization consists of a grid of squares where one is the start position squa
 
 upon starting the algorithm, the sequence of steps towards discovering the shortest path from start to end is visualized by color changes in the squares representing explored and next-to-explore states.
   
-# Requirements
-pygame
